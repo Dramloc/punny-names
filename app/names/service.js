@@ -54,12 +54,12 @@ function _generateName(id, seed) {
 
 /**
  * Generate a punny name
- * @param {number} index - the name index
+ * @param {number} id - the name identifier
  * @param {number} [seed=1234] - the generator seed
  * @return {Name} - the generated punny name
  */
-function generateName(index, seed) {
-  return _generateName(index, seed || defaults.seed);
+function generateName(id, seed) {
+  return _generateName(id, seed || defaults.seed);
 }
 
 /**
