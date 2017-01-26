@@ -9,6 +9,10 @@ A node punny name API
 
 API documentation is available [here](http://docs.punnynames.apiary.io/#)
 
+## Demo
+
+API is available [here](https://punny-names.herokuapp.com/api/names)
+
 ## Installation
 ```shell
 # Clone repository:
