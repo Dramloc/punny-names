@@ -1,0 +1,31 @@
+{
+  "name": "punny-names",
+  "version": "1.0.0",
+  "description": "A node punny name API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app/index.js",
+    "test": "eslint ."
+  },
+  "keywords": [
+    "pun",
+    "name",
+    "generator",
+    "person"
+  ],
+  "author": "Antoine Colmard <a.colmard@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.14.0",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "helmet": "^3.4.0",
+    "morgan": "^1.7.0",
+    "winston": "^2.3.1"
+  }
+}
