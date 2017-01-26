@@ -5,9 +5,9 @@
 
 A node punny name API
 
-## Demo
+## API documentation
 
-You can use the API [here](https://punny-names.herokuapp.com)
+API documentation is available [here](http://docs.punnynames.apiary.io/#)
 
 ## Installation
 ```shell
