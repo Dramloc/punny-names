@@ -36,8 +36,8 @@ app.use('/api/words', words);
 
 app.listen(config.express.port, (error) => {
   if (error) {
-    logger.error(`Unable to listen for connections on http://${config.express.ip}:${config.express.port}`, error);
+    logger.error(`Unable to listen for connections on port ${config.express.port}`, error);
     process.exit(10);
   }
-  logger.info(`Listening for connections on http://${config.express.ip}:${config.express.port}`);
+  logger.info(`Listening for connections on port ${config.express.port}`);
 });
