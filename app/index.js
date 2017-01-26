@@ -25,10 +25,10 @@ app.use(compression());
 app.use(morgan('dev', { stream: requestLogger.stream }));
 app.use(bodyParser.json());
 
-app.use('/api/v1/names', names);
-app.use('/api/v1/words', words);
+app.use('/api/names', names);
+app.use('/api/words', words);
 
-app.listen(config.express.port, config.express.ip, (error) => {
+app.listen(config.express.port, (error) => {
   if (error) {
     logger.error(`Unable to listen for connections on http://${config.express.ip}:${config.express.port}`, error);
     process.exit(10);
