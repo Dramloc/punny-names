@@ -1,80 +1,65 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: https://punny-names.herokuapp.com/
 
 # punny-names
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+Punny names is a API allowing generation of punny names.
 
-## Questions Collection [/questions]
+# Group names
 
-### List All Questions [GET]
+## Names Collection [/api/names{?limit,offset,seed}]
+
++ Parameters
+    + limit (number, optional) - the number of names generated
+        + Default: `10`
+    + offset (number, optional) - the pagination offset
+        + Default: `0`
+    + seed (number, optional) - the generator seed
+        + Default: `1234`
+
+### List names [GET]
+
+Generate a list of names.
 
 + Response 200 (application/json)
 
         [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
+            {"id":1,"first":"alain","last":"mergions"},
+            {"id":2,"first":"dimitri","last":"nassimilable"},
+            {"id":3,"first":"alain","last":"diens"},
+            {"id":4,"first":"alain","last":"formassions"},
+            {"id":5,"first":"alain","last":"sère"},
+            {"id":6,"first":"alain","last":"terjetait"},
+            {"id":7,"first":"alain","last":"tubâmes"},
+            {"id":8,"first":"fabiola","last":"çassiez"},
+            {"id":9,"first":"absolon","last":"gue-vue"},
+            {"id":10,"first":"emma","last":"noquerais"}
         ]
 
-### Create a New Question [POST]
+## Name [/api/names/{id}{?seed}]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
++ Parameters
+    + id (number) - the name identifier
+    + seed (number, optional) - the generator seed
+        + Default: `1234`
 
-+ Request (application/json)
+### Retrieve name [GET]
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
+Get a name by id.
 
-+ Response 201 (application/json)
++ Response 200 (application/json)
 
-    + Headers
+        {"id":1,"first":"alain","last":"mergions"}
 
-            Location: /questions/2
 
-    + Body
+# Group words
 
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
+## Words Collection [/api/words]
+
+### List words [GET]
+
+List the words repository.
+
++ Response 200 (application/json)
+
+        ["abaissa","abaissable","abaissables","abaissai","abaissaient","abaissais","abaissait","abaissâmes","abaissant","abaissante","abaissantes","abaissants","abaissas","abaissasse","abaissassent","abaissasses","abaissassiez","abaissassions","abaissât","abaissâtes","abaisse","abaissé","abaissée","abaissées"]
