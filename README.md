@@ -27,3 +27,10 @@ yarn
 # Launch node server
 npm start
 ```
+
+## Development
+
+```shell
+# Launch node server with nodemon
+npm run serve
+```
