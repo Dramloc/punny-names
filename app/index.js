@@ -6,7 +6,6 @@ const morgan = require('morgan');
 const winston = require('winston');
 const config = require('./config');
 const names = require('./names');
-const words = require('./words');
 
 // winston
 winston.emitErrs = true;
@@ -32,7 +31,6 @@ app.use((req, res, next) => {
 });
 
 app.use('/api/names', names);
-app.use('/api/words', words);
 
 app.listen(config.express.port, (error) => {
   if (error) {
