@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 const fs = require('fs');
 const winston = require('winston');
 const Syllables = require('../syllables/service');
