@@ -27,7 +27,6 @@
     "compression": "^1.6.2",
     "express": "^4.14.0",
     "helmet": "^3.4.0",
-    "jsonapi-serializer": "^3.4.2",
     "morgan": "^1.7.0",
     "winston": "^2.3.1"
   }
