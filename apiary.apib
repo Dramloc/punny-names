@@ -23,99 +23,58 @@ Generate a list of names.
 
 + Response 200 (application/json)
 
-        {
-          "links": {
-            "self": "{HOST}/api/names?limit=10&offset=0&seed=1234",
-            "next": "{HOST}/api/names?limit=10&offset=1&seed=1234"
+        [
+          {
+            "id": 1,
+            "first": "alain",
+            "last": "mergions"
           },
-          "meta": {
-            "limit": 10,
-            "offset": 0,
-            "seed": 1234
+          {
+            "id": 2,
+            "first": "dimitri",
+            "last": "nassimilable"
           },
-          "data": [
-            {
-              "type": "names",
-              "id": "1",
-              "attributes": {
-                "first": "alain",
-                "last": "mergions"
-              }
-            },
-            {
-              "type": "names",
-              "id": "2",
-              "attributes": {
-                "first": "dimitri",
-                "last": "nassimilable"
-              }
-            },
-            {
-              "type": "names",
-              "id": "3",
-              "attributes": {
-                "first": "alain",
-                "last": "diens"
-              }
-            },
-            {
-              "type": "names",
-              "id": "4",
-              "attributes": {
-                "first": "alain",
-                "last": "formassions"
-              }
-            },
-            {
-              "type": "names",
-              "id": "5",
-              "attributes": {
-                "first": "alain",
-                "last": "sère"
-              }
-            },
-            {
-              "type": "names",
-              "id": "6",
-              "attributes": {
-                "first": "alain",
-                "last": "terjetait"
-              }
-            },
-            {
-              "type": "names",
-              "id": "7",
-              "attributes": {
-                "first": "alain",
-                "last": "tubâmes"
-              }
-            },
-            {
-              "type": "names",
-              "id": "8",
-              "attributes": {
-                "first": "fabiola",
-                "last": "çassiez"
-              }
-            },
-            {
-              "type": "names",
-              "id": "9",
-              "attributes": {
-                "first": "absolon",
-                "last": "gue-vue"
-              }
-            },
-            {
-              "type": "names",
-              "id": "10",
-              "attributes": {
-                "first": "emma",
-                "last": "noquerais"
-              }
-            }
-          ]
-        }
+          {
+            "id": 3,
+            "first": "alain",
+            "last": "diens"
+          },
+          {
+            "id": 4,
+            "first": "alain",
+            "last": "formassions"
+          },
+          {
+            "id": 5,
+            "first": "alain",
+            "last": "sère"
+          },
+          {
+            "id": 6,
+            "first": "alain",
+            "last": "terjetait"
+          },
+          {
+            "id": 7,
+            "first": "alain",
+            "last": "tubâmes"
+          },
+          {
+            "id": 8,
+            "first": "fabiola",
+            "last": "çassiez"
+          },
+          {
+            "id": 9,
+            "first": "absolon",
+            "last": "gue-vue"
+          },
+          {
+            "id": 10,
+            "first": "emma",
+            "last": "noquerais"
+          }
+        ]
 
 ## Name [/api/names/{id}{?seed}]
 
@@ -131,18 +90,7 @@ Get a name by id.
 + Response 200 (application/json)
 
         {
-          "links": {
-            "self": "{HOST}/api/names/1?seed=1234"
-          },
-          "meta": {
-            "seed": 1234
-          },
-          "data": {
-            "type": "names",
-            "id": "1",
-            "attributes": {
-              "first": "alain",
-              "last": "mergions"
-            }
-          }
+          "id": 1,
+          "first": "alain",
+          "last": "mergions"
         }
